@@ -1,0 +1,141 @@
+<!-- 
+
+OUTSTANDING TEMPLATE TASKS - Essential (!) & Optional (+)
+A) Fonts
+    +) create standards for h1, h2, etc (still to sort out)
+
+B) Hyperlinks
+    +) Change hyperlink text colour (low priority)
+    +) Make external links open in new tab (low priority)
+
+C) CODING
+    +) Are things named correctly? Should you be calling the text columns <section> rather than a simple <div>?
+    +) CSS likely has many duplcate instructions that could be pared down for ease of reading
+    +) Comments need adding to explain each section - what should be put into the temokate etc
+
+Outstanding tasks in each structure:
+1) Menu bar <header>
+    !) Add symbols (Check the fonts - or load as images)
+
+2) Intro photo
+	!) Make the containing div scale with the background image
+    +) Round off the corners of the text box
+
+3) Second Logo
+    +) Increase text & image size 
+
+4) Text Columns
+    !) Images should re-size when browser window shrinks. Currently they're hardcoded to 300px
+    !) Overflow of images needs to be managed
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hawick Children's Farm: Cafe</title>
+<link rel="stylesheet" href="Template 1.0 - style.css">
+
+</head>
+
+
+<header class = MenuHeader>
+    <nav>
+        <a href="PettingZoo.html"><div class = SmallButton> 
+            <h2>Petting Zoo</h2>
+            <h3>Farm, Animals, & Adventure</h3>
+        </div></a>
+        
+        <a href="Park&Walks.html"><div class = SmallButton> 
+            <h2>Parks & Walks</h2>
+            <h3>Explore the borders</h3>
+        </div></a>
+        
+        <a href="index.html"><div class = MainLogoButton>
+            <h1>HAWICK CHILDREN'S FARM</h1>
+            <img src="Media/HawickLogo - 740x198px.jpg" alt="Hawick logo" width="370" height="99">
+            <h3><i>Fun for all the family!</i></h3>
+        </div></a>
+
+        <a href="FarmShop.html"><div class = SmallButton> 
+            <h2>Farm Shop</h2>
+            <h3>Fresh local produce</h3>
+        </div></a>
+        
+        <a href="Cafe.html"><div class = SmallButton> 
+            <h2>Cafe</h2>
+            <h3>Hot coffee & warm meals</h3>
+        </div></a>
+        
+    </nav>
+</header>
+
+
+<main class="MainContainer"> <!--I've popped this in as a way of describing and isolating the main content of the page, as everything within it is unique on each page-->
+
+
+    <!--This section contains a short intro text for the page, positioned over a full-width background image-->
+    <div class="TopContentContainer" style="background-image: url('Media/groupmeal.jpg')";>
+        <div style="opacity: 0.9;" class="TopContentText"> <!--Nested content box-->
+            <h2>Hawick Farm Cafe</h2> 
+            <p>Our cafe is the perfect place to grab a coffee. Gaze out over rolling hills on our veranda, or snug inside infront of our fireplace.</p>
+            
+        </div>
+    </div>
+
+
+    <!--This section re-shows the logo to break up the screen a little between the large intro image and the main block of text info. The logo slogan is customised for the page content.-->
+
+    <div class="MiddleContentContainer">
+        <div>
+            <h1>The Hawick Farm Cafe</h1>
+            <img src="Media/HawickLogo - 740x198px.jpg" alt="Hawick logo" width="370" height="99"> <!--Hawick Logo here-->        
+            <h2><i>Rest & be thankful with fresh cakes & coffee</i></h2>
+        </div>
+    </div>
+
+
+    <!-- This content is where most of the main info on the page should be held. Two images are placed by default and will wrap around the text. They can be removed if needed.
+        Additional columns can be added by changing the width setting in CSS for LowerContentColumn
+    -->
+
+    <div class="LowerContentContainer">
+        <!--Column 1-->
+        <div class="LowerContentColumn">
+            <p>Whether you're after a hearty lunch before a long hike, or are just looking for a wee respite from a lengthy drive, you'll be glad you chose Hawick Farm Cafe. We offer <strong>homemade hot lunches</strong> and a fine selection of <strong>sandwiches</strong> proudly made from local produce. Our <strong>vegan and vegetarian options</strong> are especially popular.</p>
+            <img class="LowerContentColumn" src="Media/coffee&lunch.jpg" alt="Coffee and a meal" style="float:left">
+        </div>
+        <!--Column 2-->
+        <div class="LowerContentColumn">
+            <img class="LowerContentColumn" src="Media/coffee&cake.jpg" alt="Coffee and a cake" style="float:right">            
+            <p>Those with a sweet tooth will love our <strong>freshly baked cakes</strong>. The selection varies weekly and takes full advantage of seasonal local fruit.</p> 
+            <p>We are now taking <strong>bookings for tea</strong> and will bake <strong>decorated birthday cakes</strong> to order. To find out more, give us a call on:</p>
+            <p>01450 XXX XXX<p>                
+        </div>
+    </div>
+
+
+</main>
+
+<!--
+    Footer section should be identical on each page, so is outside of <main>. 
+-->
+
+
+<footer class="Footer">
+    <div class="FooterBoxLeft">
+        CONTACT INFO & HOW TO FIND US!<br>
+        <a href="https://goo.gl/maps/QxRwPXnhQPjS2L8T6">Hawick Children's Farm, Wilton Hill, Hawick TD9 7JL</a>
+        <br>t: 01450 XXX XXX
+        |
+        e: info@hawickchildrensfarm.co.uk<br>
+        
+    </div>
+    <div class="FooterBoxRight">
+        A website by...<br>S Blackburn
+    </div>
+</footer>
+
+
+</body>
+</html>

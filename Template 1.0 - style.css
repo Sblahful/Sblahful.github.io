@@ -1,0 +1,205 @@
+/* This is the CSS file to go with 'Template 1.0' 
+
+
+OUTSTANDING TEMPLATE TASKS - Essential (!) & Optional (+)
+
+1) Whole page:
+    !) Width != screen width. Somehow the page is 1-2px wider than the screen. I did not notice when this happened, and so have been unable to undo it. 
+
+2) Intro text in nested box. 
+    +) Need to make the text opaque whilst keeping the box translucent.
+
+*/
+
+body{
+    position: relative;
+    margin-left: 0;
+    top: 0;
+    background-color: #F0FFFF;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #454545;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+p{
+    font-size: 120%;
+}
+
+/*  The following styles affect only the header     */
+
+.MenuHeader {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    /*    top: 0;
+    left: 0;
+    height: 200px; Might not need these now that it's static?
+    */
+    width: 100%;
+    border: 5px red;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    line-height: 1;
+
+}
+
+.MenuHeader a {
+    color: #454545;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.MainLogoButton {
+    float: left;
+    position: relative;
+
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 45px;
+    color: #006400;
+    font-size: 150%;
+    border: 1px white;
+    border-style: dashed;
+
+}
+
+.SmallButton {
+    float: left;
+    position: relative;
+    height: 80px;
+    width: 140px;
+    margin-right: 45px;
+    border: 1px white;
+    border-style: dashed;
+    text-align: center;
+    font-size: 80%;
+
+}
+/*If I can get the borders working on the buttons, this little thing will show the selection*/
+.MainLogoButton:hover {
+    border: 1px solid #777;
+  }
+
+.SmallButton:hover {
+    border: 1px solid #777;
+    box-shadow: 0 0 8px #777;
+  }
+
+
+.MainContainer{
+    position: relative;
+}
+
+/*  SECTION: Intro image & text     */
+
+.TopContentContainer {
+    position: relative;
+    left: 0;
+    height: 600px; /*Needs to be dynamic to meet the image size, but idk how to do this right now... If I just set it to 100% would it stretch to meet the contained image?*/
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+/*May need to remove this entirely*/
+    background-repeat: no-repeat;
+    background-attachment: absolute;  /*Beware - it doesn't shrink or resize!*/
+    background-size: 100%;
+    background-position:center top;
+}
+
+.TopContentText {
+    position: relative;
+    top: 100px;
+    left: 50px;
+    height: auto;
+    width: 400px;
+    padding: 0.8em;
+    text-align: justify;
+    background-color: cornsilk;
+    opacity: 0.6; /*I just want the box to be clear, not the contained text...*/
+}
+
+
+/*  SECTION: Second logo      */
+
+.MiddleContentContainer { 
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto; /*I think AUTO makes it take as much space as it needs, maybe?*/
+}
+
+
+/*  SECTION: Primary content & info for audience      */
+
+.LowerContentContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.LowerContentColumn {
+    float: left;
+    position: relative;
+    overflow: hidden; /*We don't want scrollbars. Ideally we want the content to expand the container to suit....The text doesn this automatically, but what about the */
+    width: 35%;
+    padding-right: 45px;
+    padding-left: 45px;
+    background-color: #F0F8FF;
+    border: 12px black;
+    /*Stuff for fonts*/
+    color: #454545;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/*I'm hoping that the class below will only apply to images with the column class, not the text*/
+.LowerContentColumn img{
+    margin: 15px;
+    padding: 0;
+    height: auto;
+    width: 300px;
+}
+
+
+/*  SECTION: Footer      */
+
+
+.Footer { 
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: slategray;
+    font-size: 120%;
+    line-height: 1.4;
+}
+
+.FooterBoxLeft {
+    padding: 20px;
+    float: left;
+    width: 50%;
+
+}
+
+.FooterBoxRight {
+    padding: 20px;
+    float: left;
+    width: 50%;
+    text-align: right;
+}
